@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultivador de MicroVerdes</title>
+</head>
+<body>
+    <style>
+        .list{
+            position: absolute;
+            left: 245px;
+            top: 2600px;
+            border: 2px solid black;
+            padding: 10px;
+            display: inline-block;
+        }
+        .fim{
+            position: absolute;
+            top: 2000px;
+            left: 550px;
+        }
+        .fim img{
+            width: 500px;
+            height: auto;
+            position: absolute;
+            left: -50px;
+            top: 50px;
+        }
+        .img_{
+            position: absolute;
+            top: 1100px;
+            left: 60px;
+        }
+        .img_ h3{
+            position: absolute;
+            left: 500px;
+            top: -50px;
+        }
+        .explicacao{
+            position: absolute;
+            top: 550px;
+            left: 290px;
+            border: 2px solid black;
+            padding: 10px;
+            display:inline-block;
+        }
+        .title{
+            position: absolute;
+            top: 50px;
+            left: 300px;
+        }
+        .img{
+            position: absolute;
+            top: 100px;
+            left: 550px;
+        }
+        .img img{
+            width: 600px;
+            height: auto;
+            position: absolute;
+            right: -160px;
+        }
+        body{
+            background-color: #5e5e5e;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+        }
+        footer{
+            background-color: black;
+            position: absolute;
+            top: 2900px;
+            left: 0px;
+            width: 100%;
+        }
+    </style>
+    <h1 class="title">Bem vindo ao cultivador de MicroVerdes 0.1</h1>
+    <div class = "img">
+        <h2>O projeto inicial é este!</h2>
+        <img src="imgrasc.png" alt="Rascunho do cultivador">
+    </div>
+    <div class="explicacao">
+        <h2>Como ele funciona<br></h2>
+        <h6>
+O Cérebro em Ação (Arduino + CNC Shield)<br>
+
+O Arduino é quem manda em tudo.<br>
+
+Ele possui um cronômetro interno (ou sensor) que decide quando é hora de ligar a luz ou regar.<br>
+
+O CNC Shield acoplado a ele serve especificamente para controlar o movimento preciso do motor.<br>
+O Ciclo de Luz (Fitas LED)<br>
+
+As fitas LED 2835 fornecem a "energia" para as plantas.<br>
+
+Através de um Relé (que funciona como um interruptor automático), o Arduino liga as luzes por um período determinado<br> (ex: 12 a 16 horas por dia) e as desliga para o descanso das plantas.
+O Sistema de Rega Inteligente (Eixo Z)<br>
+
+O Movimento: Em vez de ter uma bomba para cada bandeja, o Motor NEMA 17 gira a Barra Roscada.<br>
+
+Isso faz com que a "Treliça de Nebulização" (o cano com bicos) suba ou desça até a bandeja que precisa de água.<br>
+
+Segurança: Os sensores de Fim de Curso avisam ao Arduino que a treliça chegou no topo ou na base, evitando que o motor force a estrutura.<br>
+A Irrigação (Bomba de 12V)<br>
+
+Quando a treliça está na altura certa da bandeja, o Arduino aciona o segundo Relé, que liga a Bomba de Água.<br>
+
+A água sai do reservatório, sobe pelo tubo de silicone e é borrifada pelos bicos de 120° diretamente sobre as plantas.<br>
+Controle de Clima (DHT22 + Ventilador)<br>
+
+O sensor DHT22 fica lendo a temperatura e a umidade.<br>
+
+Se ficar muito quente lá dentro por causa dos LEDs, o Arduino liga o Ventilador de Circulação para trocar o ar.<br>
+
+Isso evita que apareçam fungos ou que as plantinhas "cozinhem" no calor.<br>
+
+Em resumo, o fluxo é:<br>
+
+Monitorar: O sensor checa o clima.<br>
+
+Iluminar: Os LEDs garantem a fotossíntese.<br>
+
+Posicionar: O motor move o braço de rega até a prateleira.<br>
+
+Regar: A bomba dispara o spray de água.<br>
+
+Repetir: O sistema volta para a posição inicial e aguarda o próximo ciclo.</h6>
+    </div>
+    <div class = "img_">
+        <h3>Como esperamos que ficará!</h3>
+        <img src="imgfim.png" alt="Resulatado esperado">
+    </div>
+    <div class = "fim">
+        <h3>Aqui está os materiais que utilizaremos!</h3>
+        <img src="lista.png" alt="Resulatado esperado">
+    </div>
+        <h4 class = "list">Listinha completa<br>⚙️ Componentes de Controle e Movimentação<br>
+            01x CNC Shield: Placa de interface para controlar os motores através de um microcontrolador (como o Arduino).<br>
+01x Motor de Passo: Responsável pelo movimento preciso e controlado do sistema.<br>
+01x Fuso Roscado: Eixo mecânico que converte o giro do motor em deslocamento vertical ou horizontal.<br>
+💧 Sistema de Irrigação e Estrutura<br>
+01x Misting Gantry: Estrutura móvel (pórtico) equipada com bicos para a pulverização das plantas.<br>
+02x Bombas de Para-brisa: Utilizadas para bombear<br> a água do reservatório até os bicos com a pressão necessária.<br>
+04 Metros de Tubulação Flexível: Mangueiras para a condução do fluido por todo o sistema.</h4>
+
+</body>
+<footer>
+    <p>Clube de sustentabilidade 2026</p>
+    <p>em parceria com a Robótica 2026.</p>
+    <p>Escola Estadual Do Jardim Canadá</p>
+</footer>
+</html>
